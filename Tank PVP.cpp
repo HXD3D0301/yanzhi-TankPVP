@@ -9,48 +9,48 @@
 #include <mmsystem.h>
 #pragma comment(lib, "winmm.lib")
 
-const char* MAP_NAMES[]     = { "·ÏÐæ", "¹¤³§", "ÊµÑéÊÒ" };
+const char* MAP_NAMES[]     = { "åºŸå¢Ÿ", "å·¥åŽ‚", "å®žéªŒå®¤" };
 const int   MAP_NAMES_COUNT = 3;
 
 const char* TANK_NAMES[] = {
-    "ÓÎÏÀ", "´©ÔÆ", "³âÐÇ", "ÉîÀ¶", "¹³Ëø",
-    "¿ñÈÈ", "÷ÈÓ°", "´Å±©", "»ùÑÒ", "ËªÄñ", "°µÁÔ"
+    "æ¸¸ä¾ ", "ç©¿äº‘", "æ–¥æ˜Ÿ", "æ·±è“", "é’©é”",
+    "ç‹‚çƒ­", "é­…å½±", "ç£æš´", "åŸºå²©", "éœœé¸Ÿ", "æš—çŒŽ"
 };
 const int   TANK_NAMES_COUNT = 11;
 
 const char* TANK_ACTIVE_NAME[] = {
-    "ÂÄ´ø¼ÓËÙ", "ÅçÆø»ú¶¯", "Õðµ´²¨", "Á¿×Ó»¤¶Ü", "¸ÖË÷¹³×¦",
-    "Ç¹¹ÜÇ¿»¯", "Á¿×ÓËí´©", "µç´ÅÂö³å", "Àë×Ó·½¿é", "Áã¶ÈÁìÓò", "Êý¾Ý²É¼¯"
+    "å±¥å¸¦åŠ é€Ÿ", "å–·æ°”æœºåŠ¨", "éœ‡è¡æ³¢", "é‡å­æŠ¤ç›¾", "é’¢ç´¢é’©çˆª",
+    "æžªç®¡å¼ºåŒ–", "é‡å­éš§ç©¿", "ç”µç£è„‰å†²", "ç¦»å­æ–¹å—", "é›¶åº¦é¢†åŸŸ", "æ•°æ®é‡‡é›†"
 };
 const char* TANK_PASSIVE_NAME[] = {
-    "»Ö¸´", "¼ÓËÙ", "ÓàÍþ", "»Ö¸´", "É¢Éä¿ª»ð",
-    "»úÅÚÄ£Ê½", "ÌØÖÊÅÚµ¯", "Êý¾Ý¸ÉÈÅ", "¹¹Ôì¸ÐÖª", "µÍÎÂÅÚµ¯", "Èõµã·ÖÎö"
+    "æ¢å¤", "åŠ é€Ÿ", "ä½™å¨", "æ¢å¤", "æ•£å°„å¼€ç«",
+    "æœºç‚®æ¨¡å¼", "ç‰¹è´¨ç‚®å¼¹", "æ•°æ®å¹²æ‰°", "æž„é€ æ„ŸçŸ¥", "ä½Žæ¸©ç‚®å¼¹", "å¼±ç‚¹åˆ†æž"
 };
 const char* TANK_SKILL_DESC[] = {
-    "°´×¡¼¼ÄÜ¼üÔö¼ÓÒÆËÙ",
-    "°ËÏòÅçÆøÎ»ÒÆ£¬·½ÏòÓÉ°´¼ü¾ö¶¨",
-    "»÷ÍËÖÜÎ§µÄµÐÈË²¢Ôì³ÉÉËº¦",
-    "¿ªÆô»¤¶ÜÒÔµÖµ²ÅÚµ¯",
-    "ÏòÇ°·½·¢Éä¹³Ëø£¬ÃüÖÐÇ½±Ú½«×ÔÉíÀ­ÏòÇ½Ìå£¬ÃüÖÐµÐÈË½«ÆäÀ­Ïò×ÔÉí",
-    "¿ªÆôºóÉä»÷¿ª»ð¼ä¸ôËõ¶ÌÖÁ70%£¬Ç¹¿Ú±äÈÈ¼õÂý£¬³ÖÐø3Ãë",
-    "Á¢¼´½øÈëÐé»¯×´Ì¬£¬ÎÞÊÓÇ½ÌåÓëÅÚµ¯£¬ÎÞ·¨¿ª»ð£¬³ÖÐø5Ãë",
-    "ÊÍ·Åµç´Å¸ÉÈÅÈ¦£¬ÊÜÓ°ÏìµÄÌ¹¿ËÎÞ·¨¿ª»ðºÍÊ¹ÓÃ¼¼ÄÜ",
-    "ÔÚ×ÔÉíÎ»ÖÃ·ÅÖÃÐéÄâÇ½±Ú£¬¿É×èµ²µÐ·½Ì¹¿ËÓëÅÚµ¯",
-    "ÊÍ·ÅÁã¶ÈÁìÓò£¬ÁìÓòÄÚÄÚµÐÈË³ÖÐøÊÜµ½¼õËÙÐ§¹û",
-    "ÊÍ·ÅÌ½²âÔ²»·£º´¥ÅöÔ²»·µÄµÐÈË±»Ê©¼ÓÊý¾ÝÓ¡¼Ç"
+    "æŒ‰ä½æŠ€èƒ½é”®å¢žåŠ ç§»é€Ÿ",
+    "å…«å‘å–·æ°”ä½ç§»ï¼Œæ–¹å‘ç”±æŒ‰é”®å†³å®š",
+    "å‡»é€€å‘¨å›´çš„æ•Œäººå¹¶é€ æˆä¼¤å®³",
+    "å¼€å¯æŠ¤ç›¾ä»¥æŠµæŒ¡ç‚®å¼¹",
+    "å‘å‰æ–¹å‘å°„é’©é”ï¼Œå‘½ä¸­å¢™å£å°†è‡ªèº«æ‹‰å‘å¢™ä½“ï¼Œå‘½ä¸­æ•Œäººå°†å…¶æ‹‰å‘è‡ªèº«",
+    "å¼€å¯åŽå°„å‡»å¼€ç«é—´éš”ç¼©çŸ­è‡³70%ï¼Œæžªå£å˜çƒ­å‡æ…¢ï¼ŒæŒç»­3ç§’",
+    "ç«‹å³è¿›å…¥è™šåŒ–çŠ¶æ€ï¼Œæ— è§†å¢™ä½“ä¸Žç‚®å¼¹ï¼Œæ— æ³•å¼€ç«ï¼ŒæŒç»­5ç§’",
+    "é‡Šæ”¾ç”µç£å¹²æ‰°åœˆï¼Œå—å½±å“çš„å¦å…‹æ— æ³•å¼€ç«å’Œä½¿ç”¨æŠ€èƒ½",
+    "åœ¨è‡ªèº«ä½ç½®æ”¾ç½®è™šæ‹Ÿå¢™å£ï¼Œå¯é˜»æŒ¡æ•Œæ–¹å¦å…‹ä¸Žç‚®å¼¹",
+    "é‡Šæ”¾é›¶åº¦é¢†åŸŸï¼Œé¢†åŸŸå†…å†…æ•ŒäººæŒç»­å—åˆ°å‡é€Ÿæ•ˆæžœ",
+    "é‡Šæ”¾æŽ¢æµ‹åœ†çŽ¯ï¼šè§¦ç¢°åœ†çŽ¯çš„æ•Œäººè¢«æ–½åŠ æ•°æ®å°è®°"
 };
 const char* TANK_PASSIVE_DESC[] = {
-    "ÅÚµ¯ÃüÖÐ»Ö¸´²¿·ÖÄÜÁ¿Ìõ",
-    "ÅçÆøÎ»ÒÆºó»ñµÃÒ»¶Î¼ÓËÙ",
-    "»÷ÍËµÐ·½Ì¹¿ËÊ¹Æä×²Ç½¿ÉÔì³É½ûÖ¹ÒÆ¶¯Ð§¹û",
-    "»¤¶Ü³É¹¦µÖµ²ºó»Ø¸´»¤¶ÜÄÍ¾Ã",
-    "ÌØÊâ¿ª»ðÄ£Ê½£ºÉ¢µ¯",
-    "ÌØÊâ¿ª»ðÄ£Ê½£º»úÇ¹",
-    "ÅÚµ¯¿ÉÒÔ´©Ç½£¬Ã¿´©Ò»¸ñËðÊ§50ËÙ¶ÈºÍ5ÉËº¦",
-    "±»´Å±©ÅÚµ¯ÃüÖÐµÄÌ¹¿ËCDÌõ½ø¶È¼õÉÙ20%",
-    "·ÅÖÃ³öµÄÇ½Ìå²»»á×èµ²×ÔÉíµÄÒÆ¶¯ºÍÅÚµ¯",
-    "ÅÚµ¯ÃüÖÐµÄÌ¹¿ËÊÜµ½¼õËÙÐ§¹û",
-    "ÅÚµ¯ÃüÖÐµþ¼ÓÊý¾ÝÓ¡¼Ç£¬Ã¿²ãÓ¡¼ÇÊ¹Ä¿±ê¶àÊÜ10ÉËº¦£¬×î¶à3²ã"
+    "ç‚®å¼¹å‘½ä¸­æ¢å¤éƒ¨åˆ†èƒ½é‡æ¡",
+    "å–·æ°”ä½ç§»åŽèŽ·å¾—ä¸€æ®µåŠ é€Ÿ",
+    "å‡»é€€æ•Œæ–¹å¦å…‹ä½¿å…¶æ’žå¢™å¯é€ æˆç¦æ­¢ç§»åŠ¨æ•ˆæžœ",
+    "æŠ¤ç›¾æˆåŠŸæŠµæŒ¡åŽå›žå¤æŠ¤ç›¾è€ä¹…",
+    "ç‰¹æ®Šå¼€ç«æ¨¡å¼ï¼šæ•£å¼¹",
+    "ç‰¹æ®Šå¼€ç«æ¨¡å¼ï¼šæœºæžª",
+    "ç‚®å¼¹å¯ä»¥ç©¿å¢™ï¼Œæ¯ç©¿ä¸€æ ¼æŸå¤±50é€Ÿåº¦å’Œ5ä¼¤å®³",
+    "è¢«ç£æš´ç‚®å¼¹å‘½ä¸­çš„å¦å…‹CDæ¡è¿›åº¦å‡å°‘20%",
+    "æ”¾ç½®å‡ºçš„å¢™ä½“ä¸ä¼šé˜»æŒ¡è‡ªèº«çš„ç§»åŠ¨å’Œç‚®å¼¹",
+    "ç‚®å¼¹å‘½ä¸­çš„å¦å…‹å—åˆ°å‡é€Ÿæ•ˆæžœ",
+    "ç‚®å¼¹å‘½ä¸­å åŠ æ•°æ®å°è®°ï¼Œæ¯å±‚å°è®°ä½¿ç›®æ ‡å¤šå—10ä¼¤å®³ï¼Œæœ€å¤š3å±‚"
 };
 
 #define SND_HUADONG  "snd_huadong"
@@ -118,7 +118,7 @@ const int WIN_H = 600;
 #define MENU_COUNT      5
 #define BASE_FONT_H     28
 #define SELECT_SCALE    1.2f
-#define FONT_NAME       "ºÚÌå"
+#define FONT_NAME       "é»‘ä½“"
 #define MAP_W           16
 #define MAP_H           16
 #define TILE            100
@@ -386,7 +386,7 @@ float     g_transTimer = 0.0f;
 MenuItem g_menu[MENU_COUNT];
 int      g_selected = 0;
 int      g_menuSubIdx[MENU_COUNT] = {0, 0, 0, 0, 0};
-const char* MENU_SUB_NAMES[] = { "Ë«ÈË", "ÈýÈË" };
+const char* MENU_SUB_NAMES[] = { "åŒäºº", "ä¸‰äºº" };
 
 GameMode g_gameMode = GM_DEATHMATCH;
 int  g_playerCount    = 2;
@@ -1750,7 +1750,7 @@ void UpdateAITank(int idx)
 
 void InitMenu()
 {
-    const char* names[MENU_COUNT] = { "µ¥ÈËÓÎÍæ", "¶àÈËËÀ¶·", "¶àÈË¾º¼¼", "Ì¹¿ËÍ¼¼ø", "²Ù×÷ËµÃ÷" };
+    const char* names[MENU_COUNT] = { "å•äººæ¸¸çŽ©", "å¤šäººæ­»æ–—", "å¤šäººç«žæŠ€", "å¦å…‹å›¾é‰´", "æ“ä½œè¯´æ˜Ž" };
     int cx = WIN_W / 2 + WIN_W / 4;
     int startY = 120, gap = 90;
     for (int i = 0; i < MENU_COUNT; i++)
@@ -1880,7 +1880,7 @@ void DrawMapSelect()
     }
     else DrawMapCover(g_mapSelCurIdx, (float)cx, (float)cy, 1.0f);
     settextstyle(24, 0, FONT_NAME); setbkmode(TRANSPARENT); settextcolor(WHITE);
-    const char* hint = "¿Õ¸ñ¼ü Ñ¡Ôñ";
+    const char* hint = "ç©ºæ ¼é”® é€‰æ‹©";
     int tw = textwidth(hint);
     outtextxy(WIN_W - 20 - tw, WIN_H - 40, hint);
 }
@@ -1937,7 +1937,7 @@ void DrawTankSelectSide(int pIdx)
     settextstyle(28, 0, FONT_NAME); setbkmode(TRANSPARENT); settextcolor(WHITE);
     const char* label;
     if (pIdx == 0) label = "P1";
-    else if (pIdx == 1) label = (g_isSinglePlayer ? "AI²Ù¿Ø" : "P2");
+    else if (pIdx == 1) label = (g_isSinglePlayer ? "AIæ“æŽ§" : "P2");
     else label = "P3";
     int lw = textwidth(label);
     outtextxy(cx - lw / 2, 30, label);
@@ -1964,7 +1964,7 @@ void DrawTankSelect()
     else { line(WIN_W / 3, 0, WIN_W / 3, WIN_H); line(2 * WIN_W / 3, 0, 2 * WIN_W / 3, WIN_H); }
     for (int i = 0; i < g_playerCount; i++) DrawTankSelectSide(i);
     settextstyle(24, 0, FONT_NAME); setbkmode(TRANSPARENT); settextcolor(WHITE);
-    const char* hint = "¿Õ¸ñ¼ü Ñ¡Ôñ";
+    const char* hint = "ç©ºæ ¼é”® é€‰æ‹©";
     int tw = textwidth(hint);
     outtextxy(WIN_W - 20 - tw, WIN_H - 40, hint);
 }
@@ -2049,7 +2049,7 @@ void DrawTankInfo()
     }
     else DrawTankInfoCover(g_tankInfoCurIdx, (float)cx, (float)cy, 1.0f);
     int barX = 480, barW = 250, barH = 24, rowGap = 50, firstY = 110;
-    const char* statLabels[4] = { "ÉäËÙ", "ÒÆËÙ", "ÉËº¦", "ÑªÁ¿" };
+    const char* statLabels[4] = { "å°„é€Ÿ", "ç§»é€Ÿ", "ä¼¤å®³", "è¡€é‡" };
     for (int i = 0; i < 4; i++)
         DrawStatBar(barX, firstY + i * rowGap, barW, barH, g_tankInfoBar[i], statLabels[i]);
     if (g_tankInfoCurIdx >= 0 && g_tankInfoCurIdx < TANK_NAMES_COUNT)
@@ -2058,7 +2058,7 @@ void DrawTankInfo()
         int descY = firstY + 4 * rowGap + 20;
         settextstyle(20, 0, FONT_NAME); setbkmode(TRANSPARENT);
         char activeLabel[64];
-        sprintf(activeLabel, "Ö÷¶¯¼¼ÄÜ£º%s", TANK_ACTIVE_NAME[g_tankInfoCurIdx]);
+        sprintf(activeLabel, "ä¸»åŠ¨æŠ€èƒ½ï¼š%s", TANK_ACTIVE_NAME[g_tankInfoCurIdx]);
         int aw = textwidth(activeLabel), ah = textheight(activeLabel);
         setfillcolor(RGB(55, 55, 55));
         solidrectangle(textX - 6, descY - 4, textX + aw + 6, descY + ah + 4);
@@ -2067,7 +2067,7 @@ void DrawTankInfo()
         DrawWrappedCN(TANK_SKILL_DESC[g_tankInfoCurIdx], textX, activeDescY, textW, lineH);
         int passiveLabelY = activeDescY + 55;
         char passiveLabel[64];
-        sprintf(passiveLabel, "±»¶¯¼¼ÄÜ£º%s", TANK_PASSIVE_NAME[g_tankInfoCurIdx]);
+        sprintf(passiveLabel, "è¢«åŠ¨æŠ€èƒ½ï¼š%s", TANK_PASSIVE_NAME[g_tankInfoCurIdx]);
         int pw = textwidth(passiveLabel), ph = textheight(passiveLabel);
         setfillcolor(RGB(140, 140, 140));
         solidrectangle(textX - 6, passiveLabelY - 4, textX + pw + 6, passiveLabelY + ph + 4);
@@ -2076,7 +2076,7 @@ void DrawTankInfo()
         DrawWrappedCN(TANK_PASSIVE_DESC[g_tankInfoCurIdx], textX, passiveDescY, textW, lineH);
     }
     settextstyle(20, 0, FONT_NAME); setbkmode(TRANSPARENT); settextcolor(WHITE);
-    const char* hint = "¿Õ¸ñ¼ü ·µ»Ø";
+    const char* hint = "ç©ºæ ¼é”® è¿”å›ž";
     int tw = textwidth(hint);
     outtextxy(WIN_W - 20 - tw, WIN_H - 36, hint);
 }
@@ -3865,7 +3865,7 @@ void DrawInvincibleBar()
     int fillW = (int)(barW * ratio);
     if (fillW > 0) { setfillcolor(RGB(80, 150, 230)); solidrectangle(barX, barY, barX + fillW, barY + barH); }
     settextstyle(20, 0, FONT_NAME); setbkmode(TRANSPARENT); settextcolor(WHITE);
-    const char* txt = "ÎÞµÐÊ±¼ä";
+    const char* txt = "æ— æ•Œæ—¶é—´";
     int tw = textwidth(txt), th = textheight(txt);
     outtextxy(barX + barW / 2 - tw / 2, barY + barH / 2 - th / 2, txt);
 }
@@ -3893,10 +3893,10 @@ void DrawBuffBar(int i, int x, int y, int w, int h)
     const char* name = "";
     switch (t.buffType)
     {
-        case BUFF_HEAL:   name = "ÐÞÀí°ü"; break;
-        case BUFF_SPEED:  name = "ÒÆËÙ¼Ó¿ì"; break;
-        case BUFF_FIRE:   name = "ÉäËÙ¼Ó¿ì"; break;
-        case BUFF_DAMAGE: name = "ÉËº¦ÌáÉý"; break;
+        case BUFF_HEAL:   name = "ä¿®ç†åŒ…"; break;
+        case BUFF_SPEED:  name = "ç§»é€ŸåŠ å¿«"; break;
+        case BUFF_FIRE:   name = "å°„é€ŸåŠ å¿«"; break;
+        case BUFF_DAMAGE: name = "ä¼¤å®³æå‡"; break;
     }
     int tw = textwidth(name), th = textheight(name);
     outtextxy(x + w / 2 - tw / 2, y + h / 2 - th / 2, name);
@@ -3924,7 +3924,7 @@ void DrawTankCDBar(int i, int x, int y, int w, int h, bool dead)
         settextstyle(14, 0, FONT_NAME);
         setbkmode(TRANSPARENT);
         settextcolor(RGB(10, 30, 90));
-        const char* warn = "ÊÜ¸ÉÈÅÎÞ·¨Ê¹ÓÃ";
+        const char* warn = "å—å¹²æ‰°æ— æ³•ä½¿ç”¨";
         int tw = textwidth(warn), th = textheight(warn);
         float jx = sinf(g_animTime * 41.0f) * 1.6f + sinf(g_animTime * 137.0f) * 0.7f;
         float jy = cosf(g_animTime * 53.0f) * 1.1f + cosf(g_animTime * 149.0f) * 0.5f;
@@ -4000,13 +4000,13 @@ void DrawCompetitivePanel()
     setbkmode(TRANSPARENT);
     settextstyle(16, 0, FONT_NAME);
     settextcolor(RGB(160, 160, 160));
-    outtextxy(panelX + 12, panelY + 6, "Íæ¼Ò");
-    outtextxy(panelX + RANK_PANEL_W - 52, panelY + 6, "µÃ·Ö");
+    outtextxy(panelX + 12, panelY + 6, "çŽ©å®¶");
+    outtextxy(panelX + RANK_PANEL_W - 52, panelY + 6, "å¾—åˆ†");
 
     settextstyle(14, 0, FONT_NAME);
     settextcolor(RGB(160, 160, 160));
     char tbuf[32];
-    sprintf(tbuf, "´ïµ½%d·Ö»ñÊ¤", g_winsumTarget);
+    sprintf(tbuf, "è¾¾åˆ°%dåˆ†èŽ·èƒœ", g_winsumTarget);
     outtextxy(panelX + 12, panelY + RANK_PANEL_H - 40, tbuf);
 
     int order[MAX_PLAYERS] = {0, 1, 2};
@@ -4087,26 +4087,26 @@ void DrawPvpOver()
         {
             if (g_score[i] > bestScore) { bestScore = g_score[i]; best = i; }
         }
-        if (best == 1 && g_isSinglePlayer) sprintf(buf, "AI »ñÊ¤");
-        else sprintf(buf, "P%d »ñÊ¤", best + 1);
+        if (best == 1 && g_isSinglePlayer) sprintf(buf, "AI èŽ·èƒœ");
+        else sprintf(buf, "P%d èŽ·èƒœ", best + 1);
     }
     else
     {
         int aliveCount = 0, aliveIdx = -1;
         for (int i = 0; i < g_playerCount; i++) if (g_tank[i].hp > 0) { aliveCount++; aliveIdx = i; }
-        if (aliveCount == 0) strcpy(buf, "Æ½¾Ö");
+        if (aliveCount == 0) strcpy(buf, "å¹³å±€");
         else
         {
-            if (aliveIdx == 1 && g_isSinglePlayer) sprintf(buf, "AI »ñÊ¤");
-            else sprintf(buf, "P%d »ñÊ¤", aliveIdx + 1);
+            if (aliveIdx == 1 && g_isSinglePlayer) sprintf(buf, "AI èŽ·èƒœ");
+            else sprintf(buf, "P%d èŽ·èƒœ", aliveIdx + 1);
         }
     }
     settextstyle(72, 0, FONT_NAME);
     int tw = textwidth(buf), th = textheight(buf);
     outtextxy(WIN_W / 2 - tw / 2, (int)(WIN_H * 0.38f) - th / 2, buf);
     settextstyle(28, 0, FONT_NAME);
-    const char* l1 = "3ÃëºóÖØÐÂ¿ªÊ¼";
-    const char* l2 = "°´ÏÂ¿Õ¸ñ¼ü·µ»ØÖ÷Ò³";
+    const char* l1 = "3ç§’åŽé‡æ–°å¼€å§‹";
+    const char* l2 = "æŒ‰ä¸‹ç©ºæ ¼é”®è¿”å›žä¸»é¡µ";
     tw = textwidth(l1); th = textheight(l1);
     outtextxy(WIN_W / 2 - tw / 2, (int)(WIN_H * 0.72f) - th / 2, l1);
     tw = textwidth(l2); th = textheight(l2);
